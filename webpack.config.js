@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 module.exports = {
 	entry: [
 				'webpack/hot/dev-server',
@@ -20,6 +21,7 @@ module.exports = {
 		}]
 	},
 	plugins: [
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
+		new OpenBrowserPlugin()
 	]
 }
